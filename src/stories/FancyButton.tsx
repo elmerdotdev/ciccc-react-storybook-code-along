@@ -6,6 +6,7 @@ type Props = {
   textColor: string;
   hasIcon: boolean;
   iconPosition: 'left' | 'right';
+  isFullWidth?: boolean;
   onToggle: (status: boolean) => void;
 };
 
@@ -17,6 +18,7 @@ const FancyButton = ({
   textColor = '#000000',
   hasIcon = true,
   iconPosition = 'right',
+  isFullWidth = false,
   onToggle,
 }: Props) => {
   const btnStyle = {
@@ -26,6 +28,7 @@ const FancyButton = ({
     borderRadius: isRounded ? '20px' : 0,
     boxShadow: hasShadow ? '1px 3px 4px 0 #999' : 'none',
     fontWeight: 'bold',
+    width: isFullWidth ? '100vw' : 'auto',
   };
 
   return (

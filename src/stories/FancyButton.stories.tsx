@@ -76,3 +76,12 @@ export const LeftIcon: Story = {
     iconPosition: 'left',
   },
 };
+
+export const FullWidth: Story = {
+  parameters: {
+    layout: 'fullscreen',
+  },
+  args: {
+    isFullWidth: true,
+  },
+};
